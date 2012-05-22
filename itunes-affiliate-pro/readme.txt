@@ -28,6 +28,8 @@ http://www.zeropaid.com/news/100885/top-5-iphone-podcast-apps/
 
 Once you have configured iTunes Affiliate Pro, try adding the following HTML to a post. &lt;a href=&quot;http://itunes.apple.com/us/app/draw-something-by-omgpop/id488627858&quot;&gt;Draw Something&lt;/a&gt;
 
+If you have configured the plugin correctly and checked the Activate Filter box you will see an affiliate URL in place of the iTunes URL. 
+
 == Installation ==
 
 1. Upload the folder `itunes-affiliate-pro` to the `/wp-content/plugins/` directory
