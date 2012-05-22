@@ -68,7 +68,7 @@ function IAP_settings_page() { ?>
         <h2>iTunes Affiliate Pro Options</h2>
         
         <p>To start making money, you need to create a free LinkShare account. <a href="http://click.linksynergy.com/fs-bin/click?id=G/REHtk3*ZI&offerid=7097&type=3&subid=0" target="_blank"><strong>Create LinkShare Account Here</strong></a></p>
-        <p>Once you create a LinkShare account, you will need to apply for the iTunes affiliate program. <a href="http://cli.linksynergy.com/cli/publisher/programs/advertiser_detail.php?oid=146261&mid=13508&offerNid=1" target="_blank">Click Here</a> for more information and to apply.</p>
+        <p>Once you <a href="http://click.linksynergy.com/fs-bin/click?id=G/REHtk3*ZI&offerid=7097&type=3&subid=0" target="_blank">create a LinkShare account</a>, you will need to apply for the iTunes affiliate program. It takes seconds to apply and you will be approved within minutes. <a href="http://cli.linksynergy.com/cli/publisher/programs/advertiser_detail.php?oid=146261&mid=13508&offerNid=1" target="_blank">Click Here</a> for more information and to apply.</p>
             
             <form method="post" action="options.php"> 
                 <?php 
