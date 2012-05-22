@@ -27,16 +27,6 @@ Working Example: http://www.zeropaid.com/news/100885/top-5-iphone-podcast-apps/
 1. Activate the plugin through the 'Plugins' menu in WordPress
 1. Visit the `iTunes Affiliate Pro Options` page and add the necessary information.
 
-== Frequently Asked Questions ==
-
-= Coming Soon =
-
-An answer to that question.
-
-== Screenshots ==
-
-1. Nothing here yet.
-
 == Changelog ==
 
 = 1.0 =
