@@ -23,7 +23,7 @@ Simple. Before WordPress outputs a post/page, iTunes Affiliate Pro searches for 
 http://www.zeropaid.com/news/100885/top-5-iphone-podcast-apps/
 
 **Getting Started**
-Once you have configured iTunes Affiliate Pro, try adding the following HTML to a post. ‘<a href="http://itunes.apple.com/us/app/draw-something-by-omgpop/id488627858"><strong>Draw Something</strong></a><strong> - $1.99</strong>‘
+Once you have configured iTunes Affiliate Pro, try adding the following HTML to a post. ‘&lt;a href=&quot;http://itunes.apple.com/us/app/draw-something-by-omgpop/id488627858&quot;&gt;Draw Something&lt;/a&gt;‘
 
 == Installation ==
 
