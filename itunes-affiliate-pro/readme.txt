@@ -1,6 +1,6 @@
 === iTunes Affiliate Pro ===
 Contributors: nasium
-Tags: itunes, affiliate, affiliate marketing, app store, ads, affiliate plugin, earn money 
+Tags: itunes, affiliate, affiliate marketing, app store, ads, affiliate plugin, earn money, linkshare
 Requires at least: 3.0
 Tested up to: 3.3.2
 Stable tag: 1.0
@@ -11,7 +11,7 @@ Automatically adds iTunes affiliate links to content.
 
 == Description ==
 
-iTunes Affiliate Pro is a hands off plugin that automatically parses your content and inserts affiliate links directly into your posts without you doing any work.
+iTunes Affiliate Pro is a hands off affiliate plugin that automatically parses your content and inserts affiliate links directly into your posts without you doing any work.
 
 Do you run a website and are you looking for new ways to monetize your content? iTunes Affiliate Pro can start making you money immediately without any added content editing.
 
