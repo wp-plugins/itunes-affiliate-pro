@@ -16,7 +16,7 @@ along with this program; if not, write to the Free Software
 Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 
 Plugin Name: iTunes Affiliate Pro
-Plugin URI: http://www.foxybay.com
+Plugin URI: http://wordpress.org/extend/plugins/itunes-affiliate-pro/
 Description: Automatically adds iTunes affilate links to your content.
 Version: 1.0
 Author: Jorge A. Gonzalez
