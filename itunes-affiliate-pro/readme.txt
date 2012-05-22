@@ -12,7 +12,7 @@ Automatically adds iTunes affiliate links to content.
 
 == Description ==
 
-iTunes Affiliate Pro is a hands off affiliate plugin that automatically parses your content and inserts affiliate links directly into your posts without you doing any work.
+iTunes Affiliate Pro is a hands off affiliate plugin that automatically parses your content and inserts affiliate links directly into posts without you doing any work.
 
 Do you run a website and are you looking for new ways to monetize your content? iTunes Affiliate Pro can start making you money immediately without any added content editing.
 
@@ -20,15 +20,19 @@ Do you run a website and are you looking for new ways to monetize your content? 
 
 Simple. Before WordPress outputs a post/page, iTunes Affiliate Pro searches for a particular URL ('http://itunes.apple.com/us/app...') string. If a match is found iTunes Affiliate Pro rewrites the link URL and adds an iTunes affiliate URL.
 
-**Working Example**
-
-http://www.zeropaid.com/news/100885/top-5-iphone-podcast-apps/
-
 **Getting Started**
 
 Once you have configured iTunes Affiliate Pro, try adding the following HTML to a post. &lt;a href=&quot;http://itunes.apple.com/us/app/draw-something-by-omgpop/id488627858&quot;&gt;Draw Something&lt;/a&gt;
 
-If you have configured the plugin correctly and checked the Activate Filter box you will see an affiliate URL in place of the iTunes URL. 
+If you have configured the plugin correctly and checked the Activate Filter box you will see an affiliate URL in place of the iTunes URL.
+
+**Working Example**
+
+http://www.zeropaid.com/news/100885/top-5-iphone-podcast-apps/
+
+**Affiliate Program Details**
+
+The LinkShare program pays affiliates 5% of all purchases made within 3 days of clicking on one of your affiliate links. Assuming the visitor doesn't click on another affiliate link, you receive commissions on all purchases the user makes in the iTunes store. Since most new iPhone & iPad users go on a downloading frenzy after initially purchasing a new device, you can quickly make money using your WordPress site. 
 
 == Installation ==
 
