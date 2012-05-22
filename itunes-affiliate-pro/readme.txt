@@ -17,7 +17,7 @@ Do you run a website and are you looking for new ways to monetize your content? 
 
 How does it work?
 
-Simple. Before WordPress outputs a post/page, iTunes Affiliate Pro searches for a particular URL string. If a match is found iTunes Affiliate Pro rewrites the link and adds an iTunes affiliate anchor tag.
+Simple. Before WordPress outputs a post/page, iTunes Affiliate Pro searches for a particular URL ('http://itunes.apple.com/us/app...') string. If a match is found iTunes Affiliate Pro rewrites the link and adds an iTunes affiliate anchor tag.
 
 Working Example: http://www.zeropaid.com/news/100885/top-5-iphone-podcast-apps/
 
@@ -25,7 +25,7 @@ Working Example: http://www.zeropaid.com/news/100885/top-5-iphone-podcast-apps/
 
 1. Upload the folder `itunes-affiliate-pro` to the `/wp-content/plugins/` directory
 1. Activate the plugin through the 'Plugins' menu in WordPress
-1. Visit the `iTunes Affiliate Pro Options` page and add the necessary information.
+1. Visit the `iTunes Affiliate Pro Options` page under settings and add the necessary information.
 
 == Changelog ==
 
