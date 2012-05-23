@@ -14,17 +14,17 @@ Automatically adds iTunes affiliate links to content.
 
 iTunes Affiliate Pro is a hands off affiliate plugin that automatically parses your content and inserts affiliate links directly into posts without you doing any work.
 
-Do you run a website and are you looking for new ways to monetize your content? iTunes Affiliate Pro can start making you money immediately without any added content editing.
+Do you run a website? Are you looking for new ways to monetize your content? iTunes Affiliate Pro can start making you money immediately without making any changes to your existing website.
 
 **How does it work?**
 
-Simple. Before WordPress outputs a post/page, iTunes Affiliate Pro searches for a particular URL ('http://itunes.apple.com/us/app...') string. If a match is found iTunes Affiliate Pro rewrites the link URL and adds an iTunes affiliate URL.
+Simple. Before WordPress outputs a post, page, or custom post type; iTunes Affiliate Pro searches for a particular URL ('http://itunes.apple.com/us/app...') string. If a match is found iTunes Affiliate Pro rewrites the link URL and adds an iTunes affiliate URL.
 
 **Getting Started**
 
 Once you have configured iTunes Affiliate Pro, try adding the following HTML to a post. &lt;a href=&quot;http://itunes.apple.com/us/app/draw-something-by-omgpop/id488627858&quot;&gt;Draw Something&lt;/a&gt;
 
-If you have configured the plugin correctly and checked the Activate Filter box you will see an affiliate URL in place of the iTunes URL.
+If you have configured the plugin correctly and checked the `Activate Filter` checkbox you will see an affiliate URL in place of the iTunes URL.
 
 **Working Example**
 
