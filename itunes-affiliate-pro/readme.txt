@@ -32,7 +32,9 @@ http://www.zeropaid.com/news/100885/top-5-iphone-podcast-apps/
 
 **Affiliate Program Details**
 
-The LinkShare program pays affiliates 5% of all purchases made within 3 days of clicking on one of your affiliate links. Assuming the visitor doesn't click on another affiliate link, you receive commissions on all purchases the user makes in the iTunes store. Since most new iPhone & iPad users go on a downloading frenzy after initially purchasing a new device, you can quickly make money using your WordPress site. Reporting takes around 3-4 days to show up in LinkShare. If you don't see any sales after that period you'll want to make sure you have set iTunes Affiliate Pro up correctly. 
+The LinkShare program pays affiliates 5% of all purchases made within 3 days of clicking on one of your affiliate links. Assuming the visitor doesn't click on another affiliate link, you receive commissions on all purchases the user makes in the iTunes store. Since most new iPhone & iPad users go on a downloading frenzy after initially purchasing a new device, you can quickly make money using your WordPress site. 
+
+Reporting takes around 3-4 days to show up in LinkShare. If you don't see any sales after that period you'll want to make sure you have set iTunes Affiliate Pro up correctly. 
 
 == Installation ==
 
