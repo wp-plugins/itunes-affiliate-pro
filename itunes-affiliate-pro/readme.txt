@@ -12,7 +12,7 @@ Automatically adds iTunes affiliate links to content.
 
 == Description ==
 
-iTunes Affiliate Pro is a hands off affiliate plugin that automatically parses your content and inserts affiliate links directly into posts without you doing any work.
+iTunes Affiliate Pro is a effortless affiliate plugin that automatically parses your content and inserts affiliate links directly into posts without you doing any work.
 
 Do you run a website? Are you looking for new ways to monetize your content? iTunes Affiliate Pro can start making you money immediately without making any changes to your existing website.
 
