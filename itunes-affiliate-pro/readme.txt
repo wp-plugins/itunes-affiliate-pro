@@ -44,6 +44,9 @@ Reporting takes around 3-4 days to show up in LinkShare. If you don't see any sa
 
 == Changelog ==
 
+= 1.1 =
+* Small fixes to admin pages.
+
 = 1.0 =
 * Plugin added to the WordPress Plugin Repository
  
