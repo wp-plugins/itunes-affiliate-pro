@@ -18,7 +18,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 Plugin Name: iTunes Affiliate Pro
 Plugin URI: http://wordpress.org/extend/plugins/itunes-affiliate-pro/
 Description: Automatically adds iTunes affiliate links to content.
-Version: 1.1
+Version: 1.2
 Author: Jorge A. Gonzalez
 Author URI: http://www.foxybay.com
 License: GPL2
@@ -27,28 +27,15 @@ License: GPL2
 
 if ( get_option("IAP-isactive") AND get_option("IAP-affiliate-code") ) {
     add_filter( 'the_content', 'IAP_ParseText', 99 );
+} 
+
+if ( !get_option("IAP-affiliate-code") ) {
+   add_action('admin_notices', 'IAP_notice');
 }
 
-function IAP_ParseText( $text ) {
-    
-  $IAP_affiliate_URL = 'http://click.linksynergy.com/fs-bin/stat?id='.get_option("IAP-affiliate-code").'&offerid=146261&type=3&subid=0&tmpid=1826&RD_PARM1='; 
-    
-    preg_match_all("/<a href=\"http:\/\/itunes.apple.com\/us\/app\/(.*?)\".*?>(.*?)<\/a>/i", $text, $matches); 
-    for($i=0;$i<count($matches[0]);$i++) { 
-      if(!preg_match("/rel=[\"\']*external nofollow[\"\']*/",$matches[0][$i])) { 
-        preg_match_all("/<a.*? href=\"(.*?)\"(.*?)>(.*?)<\/a>/i", $matches[0][$i], $matches1);   
-            $text = str_replace($matches1[1][0],$IAP_affiliate_URL.urlencode($matches1[1][0]),$text);
-            $text = str_replace(">".$matches1[3][0]."</a>"," target='_blank' rel='external nofollow'>".$matches1[3][0]."</a>",$text);
-            
-       }
-     } 
-return $text;
-}
+add_action('admin_menu', 'IAP_create_menu');
 
- 
-add_action('admin_menu', 'IAP__create_menu');
-
-function IAP__create_menu() { 
+function IAP_create_menu() { 
     add_options_page('iTunes Affiliate Pro Options', 'iTunes Affiliate Pro', 'manage_options', 'IAP_menu', 'IAP_settings_page'); 
 	add_action( 'admin_init', 'IAP_register' );
 }
@@ -62,9 +49,10 @@ function IAP_register() {
 
 function IAP_settings_page() { ?>
     <div class="wrap">
-        <h2>iTunes Affiliate Pro Options</h2>
+        <div id="icon-upload" class="icon32"></div> 
+        <h2>iTunes Affiliate Pro Options</h2> 
         
-        <p>To get started you need a free LinkShare account. <a href="http://goo.gl/HOVzV" target="_blank"><strong>Create LinkShare Account</strong></a></p>
+        <p>To get started you need a free LinkShare account. <br /><br /><input type="submit" class="button" value="Create Account" onClick="window.open('http://goo.gl/HOVzV','external')" /></p>
         <p>Once you <a href="http://goo.gl/HOVzV" target="_blank">create a LinkShare account</a>, you will need to apply for the iTunes affiliate program.<br />It takes seconds to apply and you will be approved within minutes. <a href="http://goo.gl/9e8Ls" target="_blank">Click Here to Apply</a></p>
             
             <form method="post" action="options.php"> 
@@ -85,4 +73,33 @@ function IAP_settings_page() { ?>
                 <p class="submit"><input type="submit" class="button-primary" value="<?php _e('Save Changes') ?>" /></p>        
             </form> 
     </div>
-<?php } ?>
+<?php } 
+
+ 
+
+function IAP_notice(){
+    echo '<div class="error">
+       <p><a href="/wp-admin/options-general.php?page=IAP_menu">iTunes Affiliate Pro</a> requires a free LinkShare account. <input type="submit" class="button" value="Create Account" onClick="window.open(\'http://goo.gl/HOVzV\',\'external\')"></p>
+    </div>';
+}
+
+
+function IAP_ParseText( $text ) {
+    
+  $IAP_affiliate_URL = 'http://click.linksynergy.com/fs-bin/stat?id='.get_option("IAP-affiliate-code").'&offerid=146261&type=3&subid=0&tmpid=1826&RD_PARM1='; 
+    
+    preg_match_all("/<a href=\"http:\/\/itunes.apple.com\/us\/app\/(.*?)\".*?>(.*?)<\/a>/i", $text, $matches); 
+    for($i=0;$i<count($matches[0]);$i++) { 
+      if(!preg_match("/rel=[\"\']*external nofollow[\"\']*/",$matches[0][$i])) { 
+        preg_match_all("/<a.*? href=\"(.*?)\"(.*?)>(.*?)<\/a>/i", $matches[0][$i], $matches1);   
+            $text = str_replace($matches1[1][0],$IAP_affiliate_URL.urlencode($matches1[1][0]),$text);
+            $text = str_replace(">".$matches1[3][0]."</a>"," target='_blank' rel='external nofollow'>".$matches1[3][0]."</a>",$text);
+            
+       }
+     } 
+return $text;
+}
+
+
+
+?>

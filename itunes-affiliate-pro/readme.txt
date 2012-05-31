@@ -3,7 +3,7 @@ Contributors: nasium
 Tags: itunes, affiliate, affiliate marketing, app store, ads, affiliate plugin, earn money, linkshare, posts, post, page, pages
 Requires at least: 3.0
 Tested up to: 3.3.2
-Stable tag: 1.1
+Stable tag: 1.2
 Author URI: http://www.foxybay.com/
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -43,6 +43,9 @@ Reporting takes around 3-4 days to show up in LinkShare. If you don't see any sa
 1. Visit the `iTunes Affiliate Pro Options` page under settings and add the necessary information.
 
 == Changelog ==
+
+= 1.2 =
+* Removed extra spaces in plugin that broke RSS feeds.
 
 = 1.1 =
 * Small fixes to admin pages.
