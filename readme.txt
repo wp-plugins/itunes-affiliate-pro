@@ -12,7 +12,7 @@ Automatically adds iTunes affiliate links to content.
 
 == Description ==
 
-Make money with your iTunes links using iTunes Affiliate Pro.
+Do you link to the iTunes store in your content? If yes, make money with your iTunes links using iTunes Affiliate Pro.
 
 **How does it work?**
 
