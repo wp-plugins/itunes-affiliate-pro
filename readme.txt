@@ -1,6 +1,6 @@
 === iTunes Affiliate Pro ===
 Contributors: nasium
-Tags: itunes, affiliate, affiliate marketing, app store, ads, affiliate plugin, earn money, linkshare, posts, post, page, pages
+Tags: itunes, affiliate, affiliate marketing, app store, ads, affiliate plugin, earn money, linkshare, posts, post, page, pages, associate, paypal, shop, shopping
 Requires at least: 3.0
 Tested up to: 3.4
 Stable tag: 1.2
