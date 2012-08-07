@@ -8,7 +8,7 @@ Author URI: http://www.foxybay.com/
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Automatically adds iTunes affiliate links to content.
+Earn money effortlessly from your conent with iTunes Affiliate Pro.
 
 == Description ==
 
