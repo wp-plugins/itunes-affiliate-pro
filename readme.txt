@@ -12,19 +12,17 @@ Earn money effortlessly from your conent with iTunes Affiliate Pro.
 
 == Description ==
 
-Do you link to the iTunes store in your content? If yes, make money with your iTunes links using iTunes Affiliate Pro.
+Do you link to the iTunes store in your blog posts or pages? If yes, start making money with your iTunes links using iTunes Affiliate Pro.
 
 **How does it work?**
 
-iTunes Affiliate Pro is an affiliate plugin that automatically parses your content and inserts affiliate links directly into posts without you doing any work.
+Before WordPress outputs a post, page, or custom post type; iTunes Affiliate Pro searches for a particular URL ('http://itunes.apple.com/us/album/...') string. If a match is found iTunes Affiliate Pro rewrites the link URL and adds an iTunes affiliate URL.
 
-Do you run a website? Are you looking for new ways to monetize your content? iTunes Affiliate Pro can start making you money immediately without making any changes to your existing website.
-
-Simple. Before WordPress outputs a post, page, or custom post type; iTunes Affiliate Pro searches for a particular URL ('http://itunes.apple.com/us/app...') string. If a match is found iTunes Affiliate Pro rewrites the link URL and adds an iTunes affiliate URL.
+iTunes Affiliate Pro can start making you money immediately without making any changes to your existing content.
 
 **Getting Started**
 
-Once you have configured iTunes Affiliate Pro, try adding the following HTML to a post. &lt;a href=&quot;http://itunes.apple.com/us/app/draw-something-by-omgpop/id488627858&quot;&gt;Draw Something&lt;/a&gt;
+Once you have configured iTunes Affiliate Pro, try adding the following HTML to a post. &lt;a href=&quot;http://itunes.apple.com/us/album/taxman/id401136641?i=401136642&quot;&gt;Taxman - Revolver&lt;/a&gt;
 
 If you have configured the plugin correctly and checked the `Activate Filter` checkbox you will see an affiliate URL in place of the iTunes URL.
 
@@ -45,6 +43,10 @@ Reporting takes around 3-4 days to show up in LinkShare. If you don't see any sa
 1. Visit the `iTunes Affiliate Pro Options` page under settings and add the necessary information.
 
 == Changelog ==
+
+= 1.3 =
+* Added support for all iTunes objects.
+* Added support for international affiliates.
 
 = 1.2 =
 * Removed extra spaces in plugin that broke RSS feeds.
