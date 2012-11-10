@@ -12,7 +12,8 @@ Earn money effortlessly from your conent with iTunes Affiliate Pro.
 
 == Description ==
 
-Do you link to the iTunes store in your blog posts or pages? If yes, start making money with your iTunes links using iTunes Affiliate Pro.
+iTunes Affiliate Pro creates affiliate links inside your posts/pages. No need to create LinkShare affiliate links inside your posts, this plugin does all the work.
+ 
 
 **How does it work?**
 
