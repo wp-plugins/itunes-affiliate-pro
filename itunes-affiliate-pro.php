@@ -18,7 +18,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 Plugin Name: iTunes Affiliate Pro
 Plugin URI: http://wordpress.org/extend/plugins/itunes-affiliate-pro/
 Description: Automatically adds iTunes affiliate links to content.
-Version: 1.2
+Version: 1.3
 Author: Jorge A. Gonzalez
 Author URI: http://www.foxybay.com
 License: GPL2
@@ -88,7 +88,7 @@ function IAP_ParseText( $text ) {
     
   $IAP_affiliate_URL = 'http://click.linksynergy.com/fs-bin/stat?id='.get_option("IAP-affiliate-code").'&offerid=146261&type=3&subid=0&tmpid=1826&RD_PARM1='; 
     
-    preg_match_all("/<a href=\"http:\/\/itunes.apple.com\/us\/app\/(.*?)\".*?>(.*?)<\/a>/i", $text, $matches); 
+    preg_match_all("/<a href=\"(.*?):\/\/itunes.apple.com\/(.*?)\".*?>(.*?)<\/a>/i", $text, $matches); 
     for($i=0;$i<count($matches[0]);$i++) { 
       if(!preg_match("/rel=[\"\']*external nofollow[\"\']*/",$matches[0][$i])) { 
         preg_match_all("/<a.*? href=\"(.*?)\"(.*?)>(.*?)<\/a>/i", $matches[0][$i], $matches1);   
