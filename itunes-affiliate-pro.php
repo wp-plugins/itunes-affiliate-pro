@@ -52,26 +52,75 @@ function IAP_settings_page() { ?>
         <div id="icon-upload" class="icon32"></div> 
         <h2>iTunes Affiliate Pro Options</h2> 
         
-        <p>To get started you need a free LinkShare account. <br /><br /><input type="submit" class="button" value="Create Account" onClick="window.open('http://goo.gl/HOVzV','external')" /></p>
-        <p>Once you <a href="http://goo.gl/HOVzV" target="_blank">create a LinkShare account</a>, you will need to apply for the iTunes affiliate program.<br />It takes seconds to apply and you will be approved within minutes. <a href="http://goo.gl/9e8Ls" target="_blank">Click Here to Apply</a></p>
+        
+                <div class="metabox-holder"> 
+                        <div class="postbox gdrgrid frontleft"> 
+                            <h3 class="hndle"><span>About iTunes Affiliate Pro </span></h3>
+                            <div class="gdsrclear"></div>
+                                <div class="inside">
+                                
+                                    <p>iTunes Affiliate Pro creates affiliate links inside your posts/pages.<br />No need to create LinkShare affiliate links inside your posts, this plugin does all the work.<br />Developed and maintained by <a href="http://www.thebutton.com" target="_blank">Jorge A. Gonzalez</a></p>
+                                    <a href="https://twitter.com/TheRealJAG" class="twitter-follow-button" data-show-count="false">Follow @TheRealJAG</a></p>                                      
+                                     <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+                                                                        
+                                </div>
+                        </div>
+                    </div>
+                    
+                    
+        
+                <div class="metabox-holder"> 
+                        <div class="postbox gdrgrid frontleft"> 
+                            <h3 class="hndle"><span>Getting Started </span></h3>
+                            <div class="gdsrclear"></div>
+                                <div class="inside">
+                                 <p>To get started you need a free LinkShare account. <br /><br /><input type="submit" class="button" value="Create LinkShare Account" onClick="window.open('http://goo.gl/HOVzV','external')" /></p>
+                                 <p>Once you <a href="http://goo.gl/HOVzV" target="_blank">create a LinkShare account</a>, you will need to apply for the iTunes affiliate program.<br />It takes seconds to apply and you will be approved within minutes. <a href="http://goo.gl/9e8Ls" target="_blank">Click Here to Apply</a></p>       
+                                                             
+                                </div>
+                        </div>
+                    </div>
+                    
+        
+                <div class="metabox-holder"> 
+                        <div class="postbox gdrgrid frontleft"> 
+                            <h3 class="hndle"><span>Install iTunes Affiliate Pro </span></h3>
+                            <div class="gdsrclear"></div>
+                                <div class="inside"> 
+                                    <form method="post" action="options.php"> 
+                                        <?php 
+                                        settings_fields('IAP-settings'); 
+                                        if( get_option("IAP-isactive") ){ $checked = "checked=\"checked\""; }  else { $checked = ""; }   
+                                        ?>
+                                        <table class="form-table">
+                                            <tr> 
+                                            <td nowrap valign="top" /><strong>LinkShare Affiliate ID</strong></th>
+                                            <td width="100%"><input type="text" name="IAP-affiliate-code" value="<?php echo get_option('IAP-affiliate-code'); ?>" size="50" /><br /><a href="http://goo.gl/TpcN4" target="_blank">Learn how to get your LinkShare Affiliate ID</a> / Example: <em>G/REHtk3*ZI</em></td>
+                                            </tr>  
+                                            <tr>
+                                            <td nowrap /><strong>Activate Filter</strong></th>
+                                            <td width="100%"><input type="checkbox" name="IAP-isactive" <?=$checked;?>/> Once you're ready to start adding affiliate links to your content click this box.</td>
+                                            </tr>  
+                                        </table>
+                                        <p class="submit"><input type="submit" class="button-primary" value="<?php _e('Save Changes') ?>" /></p>        
+                                    </form>                                 
+                                </div>
+                        </div>
+                    </div>
+                    
+                    
+        
+                <div class="metabox-holder"> 
+                        <div class="postbox gdrgrid frontleft"> 
+                            <h3 class="hndle"><span>Support</span></h3>
+                            <div class="gdsrclear"></div>
+                                <div class="inside"> 
+                                If you're having problems with the plugin or need help getting started, visit the <a href="http://wordpress.org/support/plugin/itunes-affiliate-pro" target="_blank">support forum</a>.                           
+                                </div>
+                        </div>
+                    </div>
+                    
             
-            <form method="post" action="options.php"> 
-                <?php 
-                settings_fields('IAP-settings'); 
-                if( get_option("IAP-isactive") ){ $checked = "checked=\"checked\""; }  else { $checked = ""; }   
-                ?>
-                <table class="form-table">
-                    <tr> 
-                    <td nowrap valign="top" /><strong>LinkShare Affiliate ID</strong></th>
-                    <td width="100%"><input type="text" name="IAP-affiliate-code" value="<?php echo get_option('IAP-affiliate-code'); ?>" size="50" /><br /><a href="http://goo.gl/TpcN4" target="_blank">Learn how to get your LinkShare Affiliate ID</a> / Example: <em>G/REHtk3*ZI</em></td>
-                    </tr>  
-                    <tr>
-                    <td nowrap /><strong>Activate Filter</strong></th>
-                    <td width="100%"><input type="checkbox" name="IAP-isactive" <?=$checked;?>/> Once you're ready to start adding affiliate links to your content click this box.</td>
-                    </tr>  
-                </table>
-                <p class="submit"><input type="submit" class="button-primary" value="<?php _e('Save Changes') ?>" /></p>        
-            </form> 
     </div>
 <?php } 
 
