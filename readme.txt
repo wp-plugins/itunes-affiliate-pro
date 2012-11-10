@@ -36,6 +36,10 @@ The LinkShare program pays affiliates 5% of all purchases made within 3 days of 
 
 Reporting takes around 3-4 days to show up in LinkShare. If you don't see any sales after that period you'll want to make sure you have setup iTunes Affiliate Pro correctly. 
 
+**Support**
+
+If you're having problems with the plugin or need help getting started, visit the support forum: http://wordpress.org/support/plugin/itunes-affiliate-pro
+
 == Installation ==
 
 1. Upload the folder `itunes-affiliate-pro` to the `/wp-content/plugins/` directory
