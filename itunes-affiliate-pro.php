@@ -90,7 +90,7 @@ function IAP_settings_page() { ?>
                                     <form method="post" action="options.php"> 
                                         <?php 
                                         settings_fields('IAP-settings'); 
-                                        if( get_option("IAP-isactive") ){ $checked = "checked=\"checked\""; }  else { $checked = ""; }   
+                                        if( get_option("IAP-isactive") ){ $checked = "checked='checked'"; }  else { $checked = ""; }   
                                         ?>
                                         <table class="form-table">
                                             <tr> 
