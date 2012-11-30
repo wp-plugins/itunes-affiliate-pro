@@ -18,15 +18,22 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 Plugin Name: iTunes Affiliate Pro
 Plugin URI: http://wordpress.org/extend/plugins/itunes-affiliate-pro/
 Description: Automatically adds iTunes affiliate links to content.
-Version: 1.3
+Version: 1.4
 Author: Jorge A. Gonzalez
 Author URI: http://www.foxybay.com
 License: GPL2
 */
 
 
+if (!class_exists('DOMDocument')) {
+   add_action('admin_notices', 'IAP_NO_DOMDocument');
+   update_option("IAP-isactive", "");
+}
+
+
+
 if ( get_option("IAP-isactive") AND get_option("IAP-affiliate-code") ) {
-    add_filter( 'the_content', 'IAP_ParseText', 99 );
+    add_filter( 'the_content', 'IAP_ParseText', 419 );
 } 
 
 if ( !get_option("IAP-affiliate-code") ) {
@@ -61,8 +68,8 @@ function IAP_settings_page() { ?>
                                 
                                     <p>iTunes Affiliate Pro creates affiliate links inside your posts/pages.<br />No need to create LinkShare affiliate links inside your posts, this plugin does all the work.<br />Developed and maintained by <a href="http://www.thebutton.com" target="_blank">Jorge A. Gonzalez</a></p>
                                     <a href="https://twitter.com/TheRealJAG" class="twitter-follow-button" data-show-count="false">Follow @TheRealJAG</a></p>                                      
-                                     <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-                                                                        
+                                    <h2>Share iTunes Affiliate Pro</h2><a href="https://twitter.com/share" class="twitter-share-button" data-url="http://wordpress.org/extend/plugins/itunes-affiliate-pro/" data-text="Just installed iTunes Affiliate Pro on my #WordPress site." data-via="TheRealJAG" data-related="TheRealJAG" data-size="large">Tweet</a>
+                                    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>                                  
                                 </div>
                         </div>
                     </div>
@@ -99,7 +106,7 @@ function IAP_settings_page() { ?>
                                             </tr>  
                                             <tr>
                                             <td nowrap /><strong>Activate Filter</strong></th>
-                                            <td width="100%"><input type="checkbox" name="IAP-isactive" <?=$checked;?>/> Once you're ready to start adding affiliate links to your content click this box.</td>
+                                            <td width="100%"><input type="checkbox" name="IAP-isactive" <?=$checked;?> /> Once you're ready to start adding affiliate links to your content click this box.</td>
                                             </tr>  
                                         </table>
                                         <p class="submit"><input type="submit" class="button-primary" value="<?php _e('Save Changes') ?>" /></p>        
@@ -132,21 +139,32 @@ function IAP_notice(){
     </div>';
 }
 
+function IAP_NO_DOMDocument(){
+    echo '<div class="error">
+       <p><strong>ERROR</strong>: iTunes Affiliate Pro requires PHP 5 and DOMDocument to work. <a href="http://wordpress.org/support/plugin/itunes-affiliate-pro" target="_blank">iTunes Affiliate Pro Support</a></p>
+    </div>';
+}
+
 
 function IAP_ParseText( $text ) {
     
-  $IAP_affiliate_URL = 'http://click.linksynergy.com/fs-bin/stat?id='.get_option("IAP-affiliate-code").'&offerid=146261&type=3&subid=0&tmpid=1826&RD_PARM1='; 
+$IAP_affiliate_URL = 'http://click.linksynergy.com/fs-bin/stat?id='.get_option("IAP-affiliate-code").'&offerid=146261&type=3&subid=0&tmpid=1826&RD_PARM1='; 
     
-    preg_match_all("/<a href=\"(.*?):\/\/itunes.apple.com\/(.*?)\".*?>(.*?)<\/a>/i", $text, $matches); 
-    for($i=0;$i<count($matches[0]);$i++) { 
-      if(!preg_match("/rel=[\"\']*external nofollow[\"\']*/",$matches[0][$i])) { 
-        preg_match_all("/<a.*? href=\"(.*?)\"(.*?)>(.*?)<\/a>/i", $matches[0][$i], $matches1);   
-            $text = str_replace($matches1[1][0],$IAP_affiliate_URL.urlencode($matches1[1][0]),$text);
-            $text = str_replace(">".$matches1[3][0]."</a>"," target='_blank' rel='external nofollow'>".$matches1[3][0]."</a>",$text);
-            
-       }
-     } 
-return $text;
+    $doc = new DOMDocument();
+    $dom->encoding = 'utf-8';
+    $doc->loadHTML(utf8_decode($text) ); 
+    $anchors = $doc->getElementsByTagName('a');
+    
+    foreach($anchors as $anchor) {
+        if (strpos($anchor->getAttribute('href'), 'itunes.apple.com')) {
+            $IAP_old_link = $anchor->getAttribute('href');
+            $anchor->setAttribute('href', $IAP_affiliate_URL.''.$IAP_old_link);
+            $anchor->setAttribute('target', '_blank');
+            $anchor->setAttribute('rel', 'external nofollow');
+        }
+    }
+     
+return $doc->saveHTML();
 }
 
 

@@ -3,7 +3,7 @@ Contributors: nasium
 Tags: itunes, affiliate, affiliate marketing, app store, ads, affiliate plugin, earn money, linkshare, posts, post, page, pages, associate, paypal, shop, shopping, marketing, plugin, url, apps, music, downloads
 Requires at least: 3.0
 Tested up to: 3.4
-Stable tag: 1.3
+Stable tag: 1.4
 Author URI: http://www.foxybay.com/
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -47,6 +47,11 @@ If you're having problems with the plugin or need help getting started, visit th
 1. Visit the `iTunes Affiliate Pro Options` page under settings and add the necessary information.
 
 == Changelog ==
+
+= 1.4 =
+* Fixed YouTube issue
+* Ported code to DOMDocument
+* Improved error handling
 
 = 1.3 =
 * Added support for all iTunes objects.
