@@ -2,7 +2,7 @@
 Contributors: nasium
 Tags: itunes, affiliate, affiliate marketing, app store, ads, affiliate plugin, earn money, linkshare, posts, post, page, pages, associate, paypal, shop, shopping, marketing, plugin, url, apps, music, downloads
 Requires at least: 3.0
-Tested up to: 3.4
+Tested up to: 3.5
 Stable tag: 1.5
 Author URI: http://www.foxybay.com/
 License: GPLv2 or later
