@@ -151,8 +151,15 @@ function IAP_ParseText( $text ) {
 $IAP_affiliate_URL = 'http://click.linksynergy.com/fs-bin/stat?id='.get_option("IAP-affiliate-code").'&offerid=146261&type=3&subid=0&tmpid=1826&RD_PARM1='; 
     
     $doc = new DOMDocument();
-    $dom->encoding = 'utf-8';
-    $doc->loadHTML(utf8_decode($text) ); 
+    $dom->encoding = 'utf-8';    
+    
+    $decoded_text = utf8_decode($text);
+    if ( $decoded_text == '' ) {
+        return $doc->saveHTML();
+    }
+    $dom->strictErrorChecking = false;
+    @$doc->loadHTML($decoded_text);    
+    
     $anchors = $doc->getElementsByTagName('a');
     
     foreach($anchors as $anchor) {
